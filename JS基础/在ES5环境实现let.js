@@ -15,4 +15,4 @@
     console.log(a);
 })();
 
-console.log(a);
+// console.log(a);  //报错

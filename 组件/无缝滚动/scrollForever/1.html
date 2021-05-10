@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #a,
+        #a2 {
+            margin-top: 20px;
+            height: 100px;
+            background-color: aquamarine;
+            overflow: hidden;
+        }
+        #a3{
+            height: 100px;
+            background-color: aquamarine;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="a">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+        </ul>
+    </div>
+
+    <div id="a2">
+        <div class="aaa">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+            <div>15</div>
+            <div>16</div>
+            <div>17</div>
+            <div>18</div>
+            <div>19</div>
+            <div>20</div>
+        </div>
+    </div>
+
+    <div>
+        <table>
+            <thead>
+                <th>
+                    <td>姓名</td>
+                    <td>性别</td>
+                </th>
+            </thead>
+        </table>
+    </div>
+    <div id="a3">
+        
+        <div class="aaa">
+           <table>
+               <tbody>
+                   <tr>
+                       <td>1</td>
+                       <td>nan</td>
+                   </tr>
+                   <tr>
+                    <td>2</td>
+                    <td>nan</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>nan</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>nan</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>nan</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>nan</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>nan</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>nan</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>nan</td>
+                </tr>
+               </tbody>
+           </table>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/scrollForever.js"></script>
+    <script>
+        $("#a").scrollForever({
+            // continuous: false,
+            dir: "top",
+            // container: ".b-con",
+            // inner: "div",
+            delayTime: 30,  //ms
+            // speed:200000,  //ms
+            // num:3
+        });
+        // 非连续滚动
+        $("#a2").scrollForever({
+            continuous: false,
+            dir: "top",
+            container: ".aaa",
+            inner: "div",
+            delayTime: 2000,  // ms
+            // speed:200000,
+            num: 3  // 每次滚动的个数
+        });
+        $("#a3").scrollForever({
+            // continuous: false,
+            dir: "top",
+            container: ".aaa",
+            inner: "table",
+            delayTime: 30,
+            // speed:200000,
+            // num:3
+        });
+    </script>
+
+</body>
+
+</html>

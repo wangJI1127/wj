@@ -2,8 +2,9 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 
 import App from './App';
+import './assets/style/reset.css'
 
 ReactDOM.render(
-  <App></App>,
+  <App/>,
   document.getElementById('root')
 )

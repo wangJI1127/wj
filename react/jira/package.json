@@ -1,27 +1,33 @@
 {
-  "name": "cookbook",
+  "name": "jira",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "antd-mobile": "^2.3.4",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^12.20.15",
+    "@types/react": "^17.0.9",
+    "@types/react-dom": "^17.0.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "typescript": "^4.3.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts  start",
-    "build": "react-scripts  build",
-    "test": "react-scripts  test",
-    "eject": "react-scripts eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "json-server": "json-server --watch __json-server__/db.json"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "prettier"
     ]
   },
   "browserslist": {
@@ -37,8 +43,9 @@
     ]
   },
   "devDependencies": {
-    "babel-plugin-import": "^1.13.3",
-    "customize-cra": "^1.0.0",
-    "react-app-rewired": "^2.1.8"
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "2.3.1"
   }
 }

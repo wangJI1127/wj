@@ -1,20 +1,22 @@
 import {useEffect, useState} from "react";
 
-export const isFalsy = (value) => value === 0 ? false : !value;
+export const isFalsy = (value: any) => value === 0 ? false : !value;
 
-export const cleanObject = (object) => {
+export const cleanObject = (object: object) => {
     // Object.assign({}, object)
     const result = {...object};
     Object.keys(object).forEach(key => {
+        // @ts-ignore
         const value = object[key];
         if (isFalsy(value)){
+            // @ts-ignore
             delete result[key];
         }
     })
     return result;
 }
 
-export const useMount = (callback) => {
+export const useMount = (callback: ()=>void) => {
     useEffect(() => {
         callback();
     }, []) // [] 表示只执行一次
@@ -33,7 +35,7 @@ export const useMount = (callback) => {
 //     }
 // }
 
-export const useDebounce = (value, delay) => {
+export const useDebounce = (value:any, delay?:number) => { // ?: 表示可以不传参数
     const [debounceValue, setDebounceValue] = useState(value);
     useEffect(() => {
         const timeout = setTimeout(() => setDebounceValue(value), delay);
